@@ -10,7 +10,7 @@ and the scroll API, which help
 Installation
 ------------
 
-    $ go get github.com/miku/estab/cmd/estab
+    $ go get github.com/hochgi/estab/cmd/estab
 
 Or if your system speaks `dpkg` or `rpm`, there is a [release](https://github.com/miku/estab/releases).
 

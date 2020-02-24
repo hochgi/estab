@@ -1,5 +1,5 @@
-module github.com/miku/estab
+module github.com/hochgi/estab
 
 go 1.12
 
-require github.com/belogik/goes v0.0.0-20151229125003-e54d722c3aff
+require github.com/OwnLocal/goes v1.0.0-20160726222854-6c9647b81cbf

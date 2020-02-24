@@ -13,8 +13,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/belogik/goes"
-	"github.com/miku/estab"
+	"github.com/OwnLocal/goes"
+	"github.com/hochgi/estab"
 )
 
 func main() {
@@ -83,7 +83,7 @@ func main() {
 		query["fields"] = fields
 	}
 
-	conn := goes.NewConnection(*host, *port)
+	conn := goes.NewClient(*host, *port)
 	scanResponse, err := conn.Scan(query, indices, []string{""}, *timeout, *size)
 	if err != nil {
 		log.Fatal(err)
@@ -98,7 +98,7 @@ func main() {
 	}
 
 	for {
-		scrollResponse, err := conn.Scroll(scanResponse.ScrollId, *timeout)
+		scrollResponse, err := conn.Scroll(scanResponse.ScrollID, *timeout)
 		if err == io.EOF {
 			break
 		}
@@ -126,7 +126,7 @@ func main() {
 				var c []string
 				switch f {
 				case "_id":
-					c = append(c, hit.Id)
+					c = append(c, hit.ID)
 				case "_index":
 					c = append(c, hit.Index)
 				case "_type":

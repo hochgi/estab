@@ -7,7 +7,7 @@ BuildArch:  x86_64
 BuildRoot:  %{_tmppath}/%{name}-build
 Group:      System/Base
 Vendor:     UB Leipzig
-URL:        https://github.com/miku/estab
+URL:        https://github.com/hochgi/estab
 
 %description
 
